@@ -1,24 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
-import { Route, Routes} from 'react-router-dom';
+import { Route, Routes, Link} from 'react-router-dom';
 import Champ from './Routes/Champ';
+import Lank from './Routes/Lank';
 
 function App() {
 
   // 검색어 상태 변수
   const [searchTerm, setSearchTerm] = useState('');
-
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setSearchTerm(value);
+  }
 
   
   return (
     <div className="App">
       <Header></Header>
-      <div>
-        <input className="search" type="text" placeholder="소환사 명, 닉네임을 입력하세요" value={searchTerm}/>
-      </div>
+
       <Routes>
+        <Route path="/" element={
+        <>
+        <div>
+        <input className="search" type="text" placeholder="소환사 명, 닉네임을 입력하세요" value={searchTerm} onChange={handleChange}/>
+        </div>
+        </>
+        }></Route>
         <Route path="/champ" element={<Champ/>}></Route>
+        <Route path="/lank" element={<Lank/>}></Route>
       </Routes>
     </div>
   );
@@ -27,7 +37,9 @@ function App() {
 function Header(){
   return (
     <div className="header">
-    <h4>LET.GG</h4>
+    <h4>
+    <Link to="/">LET.GG</Link>
+    </h4>
     <nav className="nav">
       <li>챔피언 분석</li>
       <li>랭킹</li>
