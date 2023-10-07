@@ -1,9 +1,9 @@
 import React from "react";
 
-function Lank() {
+function Rank() {
     return (
     <div>라우터2</div>
     )
 }
 
-export default Lank;
+export default Rank;

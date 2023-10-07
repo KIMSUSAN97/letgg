@@ -3,7 +3,7 @@ import './App.css';
 import { useState } from 'react';
 import { Route, Routes, Link} from 'react-router-dom';
 import Champ from './Routes/Champ';
-import Lank from './Routes/Lank';
+import Rank from './Routes/Rank';
 
 function App() {
 
@@ -28,7 +28,7 @@ function App() {
         </>
         }></Route>
         <Route path="/champ" element={<Champ/>}></Route>
-        <Route path="/lank" element={<Lank/>}></Route>
+        <Route path="/rank" element={<Rank/>}></Route>
       </Routes>
     </div>
   );
