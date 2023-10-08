@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Route, Routes, Link} from 'react-router-dom';
 import Champ from './Routes/Champ';
 import Rank from './Routes/Rank';
+import Header from './components/head';
 
 function App() {
 
@@ -18,7 +19,6 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
-
       <Routes>
         <Route path="/" element={
         <>
@@ -28,26 +28,10 @@ function App() {
         </>
         }></Route>
         <Route path="/champ" element={<Champ/>}></Route>
-        <Route path="/rank" element={<Rank/>}></Route>
+        <Route path="/ank" element={<Rank/>}></Route>
       </Routes>
     </div>
   );
-}
-
-function Header(){
-  return (
-    <div className="header">
-    <h4>
-    <Link to="/">LET.GG</Link>
-    </h4>
-    <nav className="nav">
-      <li>챔피언 분석</li>
-      <li>랭킹</li>
-      <li>커뮤니티</li>
-      <li>아이템</li>
-    </nav>
-    </div> 
-  )
 }
 
 export default App;

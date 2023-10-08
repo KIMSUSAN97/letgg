@@ -53,6 +53,15 @@ li {
   font-weight: 700;
 }
 
+.logo33 {
+  display: flex;
+  align-items: center;
+  margin-top: 500px;
+  margin-left: 150px;
+  width: 500px;
+  height: 200px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
